@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+	<title>Collaboration Tool</title>
+	<h:outputScript library="js" name="canvas.js" target="body" />
+<link rel="stylesheet" href="https://ssl.gstatic.com/docs/script/css/add-ons1.css"></link>
+<style>
+div.box{width:100%;}
+div.canvas{float:left; display:inline-block;margin: 5px; }
+div.chat{  float:left; display:inline-block;margin: 5px; }
+</style>
+</h:head>
+<h:body bgcolor="white" onload="webSocket();">
+	<h3>Collaboration Tool</h3>
+	<h4>Welcome #{homeBean.name}!!!</h4>
+	<h:form enctype="multipart/form-data" id="formId">
+		<h:inputHidden id="isadmin" value="#{homeBean.fileupload}"></h:inputHidden>
+		<h:inputHidden id="room" value="#{homeBean.meetingId}"></h:inputHidden>
+		<h:inputHidden id="name" value="#{homeBean.name}"></h:inputHidden>
+		<h:inputFile id="file" style="margin:5px" rendered="#{homeBean.fileupload}"
+			value="#{homeBean.uploadedFile}">
+		</h:inputFile>
+		<h:commandButton value="Upload" style="margin:5px" rendered="#{homeBean.fileupload}"
+			action="#{homeBean.loadFile}" />
+		<h:commandButton value="Clear" type="button" style="margin:5px"
+			rendered="#{homeBean.fileupload}" onclick="selectSlide();" />
+	</h:form>
+	<h:form id="main">
+	<div class="box">
+	<div class="canvas">
+		<canvas id="myCanvas" width="600" height="380"
+			style="border:1px solid #000000;"></canvas></div><div class="chat">
+		<h:inputTextarea id="chathistory" readonly="true" name="chat"
+			style="margin: 5px; width: 250px; height: 340px;"
+			autofocus="autofocus"></h:inputTextarea>
+		<br></br> <h:inputText placeholder="enter a message..." id="chatmsg"
+			style="margin: 5px; width: 200px;"
+			onkeydown="if ((event.keyCode ? event.keyCode : event.which) ==13){  event.preventDefault(); sendchat();}" />
+		<h:commandButton type="button"  onclick="sendchat(); " value="Send"></h:commandButton>
+	</div><div>
+	<h4>Video connection using webRTC will be developed further. 
+	Work is in progress.</h4>
+	</div>
+	</div>
+	</h:form>
+	<div
+		style="width: 100%; background-color: white; height: 120px; overflow: scroll; overflow-x: scroll; overflow-y: hidden;">
+		<div style="width: 120000px;">
+			<ui:repeat var="img" value="#{homeBean.imagesList}">
+				<h:graphicImage name="#{img}" height="120px" width="120px"
+					style=" float:left; display:inline"
+					onclick="selectSlide(this.src);" />
+			</ui:repeat>
+		</div>
+	</div>
+
+</h:body>
+</html>

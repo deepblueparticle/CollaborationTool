@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+	<title>Collaboration Tool</title>
+	<link rel="stylesheet" href="https://ssl.gstatic.com/docs/script/css/add-ons1.css"></link>
+</h:head>
+<h:body>
+	<h3>Collaboration Tool Home</h3>
+	<h:form>
+	  	<h:outputLabel style="margin:5px">User Name:</h:outputLabel>
+		<h:inputText style="margin:5px" value="#{homeBean.name}"></h:inputText><br></br>
+		<h:outputLabel style="margin:5px" >Meeting Id:</h:outputLabel>
+		<h:inputText style="margin:5px" value="#{homeBean.meetingId}"></h:inputText><br></br>
+		<h:commandButton style="margin:5px" value="Create Meeting" action="#{homeBean.createMeeting}"></h:commandButton>
+		<h:commandButton style="margin:5px" value="Join Meeting" action="#{homeBean.openMeeting}"></h:commandButton>
+		
+	</h:form>
+</h:body>
+</html>
