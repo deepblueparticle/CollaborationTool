@@ -19,7 +19,7 @@ To build scalable one to many video streaming using HTML5 WebRTC where the strea
 
 Implementation Details:
 ========================
-Java Server Faces 2.2 is used primarily for web application.
-Apache POI api is used for converting ppt files into images and display.
-Web Sockets is used for sending chat messages and user (one delivering presentation) mouse events.
-HTML5 canvas element is used to write on top of presentation and all those edits are shown to other users by sending mouse event data through web socket.
+1. Java Server Faces 2.2 is used primarily for web application.
+2. Apache POI api is used for converting ppt files into images and display.
+3. Web Sockets is used for sending chat messages and user (one delivering presentation) mouse events.
+4. HTML5 canvas element is used to write on top of presentation and all those edits are shown to other users by sending mouse event data through web socket.
