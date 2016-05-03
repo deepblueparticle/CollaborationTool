@@ -30,6 +30,7 @@ div.chat{  float:left; display:inline-block;margin: 5px; }
 			action="#{homeBean.loadFile}" />
 		<h:commandButton value="Clear" type="button" style="margin:5px"
 			rendered="#{homeBean.fileupload}" onclick="selectSlide();" />
+		<h:outputLabel style="white-space: nowrap;">Note:* Supports only .pptx files</h:outputLabel>	
 	</h:form>
 	<h:form id="main">
 	<div class="box">

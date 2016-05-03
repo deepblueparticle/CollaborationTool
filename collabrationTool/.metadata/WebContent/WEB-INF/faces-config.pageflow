@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf14586978661110" configfile="/collabrationTool/WebContent/WEB-INF/faces-config.xml">
-  <nodes xsi:type="pageflow:PFPage" name="home.xhtml" id="pf14587128486590" referenceLink="//@navigationRule.0/@fromViewId|" outlinks="pf14587128486601 pf14588767304420" path="home.xhtml"/>
-  <nodes xsi:type="pageflow:PFPage" name="create.xhtml" id="pf14587128486612" referenceLink="//@navigationRule.0/@navigationCase.1/@toViewId|" inlinks="pf14587128486601" path="create.xhtml"/>
-  <nodes xsi:type="pageflow:PFPage" name="open.xhtml" id="pf14588767304421" referenceLink="//@navigationRule.0/@navigationCase.1/@toViewId|" inlinks="pf14588767304420" path="open.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="home.xhtml" id="pf14587128486590" referenceLink="//@navigationRule.0/@fromViewId|" outlinks="pf14587128486601" path="home.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="create.xhtml" id="pf14587128486612" referenceLink="//@navigationRule.0/@navigationCase.0/@toViewId|" inlinks="pf14587128486601" path="create.xhtml"/>
   <links id="pf14587128486601" target="pf14587128486612" source="pf14587128486590" outcome="create" fromaction="#{homeBean.createMeeting}"/>
-  <links id="pf14588767304420" target="pf14588767304421" source="pf14587128486590" outcome="open" fromaction="#{homeBean.createMeeting}"/>
 </pageflow:Pageflow>
