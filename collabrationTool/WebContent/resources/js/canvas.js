@@ -161,7 +161,7 @@ function sendchat(){
 function webSocket(){
 
 		if(ws == undefined || ws.readyState == WebSocket.CLOSED){
-			ws = new WebSocket("ws://localhost:8080/collabrationTool/echo/"+room);
+			ws = new WebSocket("ws://52.38.120.103:80/collabrationTool/echo/"+room);
 		}
 	
 	ws.onmessage = function (evt) 
