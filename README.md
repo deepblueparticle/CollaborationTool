@@ -2,7 +2,7 @@
 Collaboration Tool: For delivering presentations online 
 ========================================================
 
-URL: http://collaborationtool.tk
+URL: http://collaborationtool-env.us-west-2.elasticbeanstalk.com/
 ===
 
 Built on :
