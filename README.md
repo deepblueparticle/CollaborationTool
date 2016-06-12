@@ -2,7 +2,7 @@
 Collaboration Tool: For delivering presentations online 
 ========================================================
 
-URL: http://ec2-52-35-156-118.us-west-2.compute.amazonaws.com:8080/collabrationTool/
+URL: http://ec2-52-35-156-118.us-west-2.compute.amazonaws.com/collabrationTool/
 ===
 
 Built on :
